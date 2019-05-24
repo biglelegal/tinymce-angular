@@ -1,11 +1,11 @@
-import { Component, AfterViewInit, Input, ElementRef, OnDestroy, forwardRef, NgZone, Inject, PLATFORM_ID } from '@angular/core';
-import { ControlValueAccessor, NG_VALUE_ACCESSOR } from '@angular/forms';
-
-import * as ScriptLoader from '../utils/ScriptLoader';
-import { uuid, isTextarea, bindHandlers, mergePlugins } from '../utils/Utils';
-import { getTinymce } from '../TinyMCE';
-import { Events } from './Events';
 import { isPlatformBrowser } from '@angular/common';
+import { AfterViewInit, Component, ElementRef, forwardRef, Inject, Input, NgZone, OnDestroy, PLATFORM_ID } from '@angular/core';
+import { ControlValueAccessor, NG_VALUE_ACCESSOR } from '@angular/forms';
+import { getTinymce } from '../TinyMCE';
+import * as ScriptLoader from '../utils/ScriptLoader';
+import { bindHandlers, isTextarea, mergePlugins, uuid } from '../utils/Utils';
+import { Events } from './Events';
+
 
 const scriptState = ScriptLoader.create();
 
@@ -24,7 +24,7 @@ const EDITOR_COMPONENT_VALUE_ACCESSOR = {
 export class EditorComponent extends Events implements AfterViewInit, ControlValueAccessor, OnDestroy {
   private elementRef: ElementRef;
   private element: Element | undefined = undefined;
-  private editor: any;
+  public editor: any;
 
   ngZone: NgZone;
 
