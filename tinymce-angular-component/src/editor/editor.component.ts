@@ -6,7 +6,6 @@ import * as ScriptLoader from '../utils/ScriptLoader';
 import { bindHandlers, isTextarea, mergePlugins, uuid } from '../utils/Utils';
 import { Events } from './Events';
 
-
 const scriptState = ScriptLoader.create();
 
 const EDITOR_COMPONENT_VALUE_ACCESSOR = {
