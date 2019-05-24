@@ -1,11 +1,10 @@
 {
-  "name": "@tinymce/tinymce-angular",
+  "name": "@bigle/tinymce-angular",
   "version": "3.0.1",
-  "description": "Official TinyMCE Angular Component",
+  "description": "Bigle Legal Official Fork of TinyMCE Angular Component",
   "author": "Ephox Inc",
   "license": "Apache-2.0",
   "scripts": {
-    "preinstall": "node -e \"if(process.env.npm_execpath.indexOf('yarn') === -1) throw new Error('You must use Yarn to install, not NPM')\"",
     "start": "npm run storybook",
     "storybook": "start-storybook -p 9001 -c .storybook",
     "test": "ng test",
